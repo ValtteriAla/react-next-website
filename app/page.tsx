@@ -1,19 +1,14 @@
-import TopNavigation from "@/components/TopNav";
-import Footer from "@/components/Footer";
-import ListCountryData from "@/components/ListData";
 
 
 export default function Home() {
 
-/* Fetch data before rendering
+/* Fetch data before rendering - for client side fetching, watch: "@/components/ListData"
   const countries = await getCountries();
 */
 
-
-
   return (
     <div className="page-container">
-      <TopNavigation />
+     
       <main className="main-content items-center justify-between p-2">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
@@ -22,12 +17,12 @@ export default function Home() {
           exercitationem.
         </p>
 
-        <ul className="max-h-32 overflow-y-auto max-w-72 border-black border-2 rounded">
-          <ListCountryData/>
+        <ul className="h-32 w-72 overflow-y-auto border-black border-2 rounded">
+       
         </ul>
       </main>
 
-      <Footer />
+   
     </div>
   );
 }
