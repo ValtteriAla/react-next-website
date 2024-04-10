@@ -1,15 +1,12 @@
 
-
 export default function Home() {
-
-/* Fetch data before rendering - for client side fetching, watch: "@/components/ListData"
+  /* Fetch data before rendering - for client side fetching, watch: "@/components/ListData"
   const countries = await getCountries();
 */
 
   return (
     <div className="page-container">
-     
-      <main className="main-content items-center justify-between p-2">
+      <main className="main-content items-center justify-between p-4">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
           alias illum fuga, at eos voluptatum consectetur quasi quam, libero
@@ -17,12 +14,8 @@ export default function Home() {
           exercitationem.
         </p>
 
-        <ul className="h-32 w-72 overflow-y-auto border-black border-2 rounded">
-       
-        </ul>
+        <ul className="h-32 w-72 overflow-y-auto border-black border-2 rounded"></ul>
       </main>
-
-   
     </div>
   );
 }

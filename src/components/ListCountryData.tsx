@@ -45,7 +45,7 @@ export default function ListCountryData() {
     <p>flag: {obj.flag}</p>
     <p>region: {obj.region}</p>
     <p>currencies:</p>
-    <ul>
+    <ul className='list-disc ml-10'>
       {Object.values(obj.currencies).map((value) => (
         <li key={value.name}>{value.name}</li>))}
     </ul>

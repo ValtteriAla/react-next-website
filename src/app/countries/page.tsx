@@ -1,12 +1,13 @@
 
+'use client'
 import type { Country } from "../../../lib/types";
 import { useState, useEffect } from "react";
 import { getCountries } from "../../../lib/api";
 import TopNavigation from "@/components/TopNav";
 import Footer from "@/components/Footer";
-import RootLayout from "../../../app/layout";
+import RootLayout from "../layout";
 
-export default function Countries() {
+export default function Page() {
   const [countries, setCountries] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -36,7 +37,7 @@ export default function Countries() {
     <a className="max-w-32" key={obj.name.common} href={`/countries/${obj.name.common}`}>{obj.name.common}</a>))
 
   return (
-    <RootLayout>
+ 
     <div className="page-container">
       <main className="main-content">
         <div className="grid grid-cols-6 m-10">
@@ -46,6 +47,6 @@ export default function Countries() {
       </main>
 
     </div>
-    </RootLayout>
+ 
   );
 }
