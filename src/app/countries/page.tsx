@@ -1,5 +1,4 @@
-
-'use client'
+"use client";
 import type { Country } from "../../../lib/types";
 import { useState, useEffect } from "react";
 import { getCountries } from "../../../lib/api";
@@ -32,21 +31,53 @@ export default function Page() {
     </li>
   ));
   */
-  console.log(countries[0]);
-  const countryLinks = countries.map((obj: Country) => (
-    <a className="max-w-32" key={obj.name.common} href={`/countries/${obj.name.common}`}>{obj.name.common}</a>))
+  //console.log(countries);
+
+  const countriesSorted = countries.sort((a: Country, b: Country) => {
+    if (a.name.common > b.name.common) return 1;
+    else return 0;
+  });
+
+  console.log(countriesSorted);
+
+  let currentLetter = "A";
+  let headerInserted = false;
+
+  const countryLinks = countriesSorted.map((obj: Country) => {
+    let headerElement = null;
+    if (currentLetter === obj.name.common[0]) {
+      if (!headerInserted) {
+        headerInserted = true;
+        headerElement = true;
+      }
+    } else {
+      currentLetter = obj.name.common[0];
+      headerInserted = false;
+    }
+
+    return (
+      <div key={obj.name.common} className={`item ${headerElement ? "header-el" : ""}`}>
+        {headerElement && <h1>{currentLetter}</h1>}
+        <a
+          className="max-w-32"
+          
+          href={`/countries/${obj.name.common}`}
+        >
+          {obj.name.common}
+        </a>
+      </div>
+    );
+  });
 
   return (
- 
     <div className="page-container">
       <main className="main-content">
-        <div className="grid grid-cols-6 m-10">
+        <div className="test1">
           {countryLinks}
-        </div>
-        
+          </div>
       </main>
-
     </div>
- 
   );
 }
+
+
