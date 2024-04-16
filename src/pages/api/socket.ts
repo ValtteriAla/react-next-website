@@ -1,7 +1,7 @@
 import { Server } from "Socket.IO";
 import { createClient } from "@/utils/supabase/server";
 
-const handleUpdates = async (payload: any, socket: any) => {
+const handleUpdates = (payload: any, socket: any) => {
   socket.emit("data", payload.new);
 };
 

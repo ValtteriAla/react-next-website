@@ -93,3 +93,9 @@ a.active {
   font-weight: bold; 
 
 }
+
+.sidebar {
+  grid-row: 2/15;
+  grid-column: 1;
+  background: black;
+}
