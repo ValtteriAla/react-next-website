@@ -15,6 +15,10 @@ const links = [
   href: "/about",
   name: "About",
 },
+{
+  href: "/posts",
+  name: "Posts",
+},
 ];
 export default function TopNavigation() {
   const pathname = usePathname();
