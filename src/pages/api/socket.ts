@@ -1,4 +1,4 @@
-import { Server } from "Socket.IO";
+import { Server } from "socket.io";
 import { createClient } from "@/utils/supabase/server";
 
 const handleUpdates = (payload: any, socket: any) => {
