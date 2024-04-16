@@ -34,10 +34,6 @@ export default function ListCountryData() {
     </li>
   ));
   */
- console.log(country)
-  const countryData = Object.values(country).map(function(value) {
-    return <li>{JSON.stringify(value)}</li>;
-  });
 
   return country.map((obj: Country) => (
     <div key={obj.name.common}>

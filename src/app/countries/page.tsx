@@ -2,9 +2,6 @@
 import type { Country } from "../../../lib/types";
 import { useState, useEffect } from "react";
 import { getCountries } from "../../../lib/api";
-import TopNavigation from "@/components/TopNav";
-import Footer from "@/components/Footer";
-import RootLayout from "../layout";
 
 export default function Page() {
   const [countries, setCountries] = useState([]);

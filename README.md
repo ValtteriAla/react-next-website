@@ -6,31 +6,30 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What to develop for this project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Decent project structure with Layouts
+    - Layouts for base components (meta, top navigation, footer...) that will be used in every site.
+    - Layouts for spesific routes (some modifications to the base layout)
+2. Blog/Posts page where content will be fetched outside of this project (CMS)
+    - I would like a CMS that has a good editor and interface, and if these do not exists then CMS where to copy paste a MD file and upload images.
+    - A good API
+3. RealtimeChat with connected users
+    - Users can see messages and also write them (Uses websockets)
+    - First just a session based (nothing is saved to db)
+4. Login with OAuth
+    - Sessions
+    - Check admin priviledges in supabase (Grants admin access to tables)
+    - Check admin priviledges in middleware (Grants admin access to protected routes and additional features)
+5. Some CRUD application
+    - User profile when logged in
+    - Feedback form for logged in users (can do all CRUD operations for this)
+6. Realtime data graph or just graph with fetched data
+    - Page visit counter (Session based)
+    - Can be fetched from db or from outside source
+7. Tests for all functions
+    - Need to check what is a good testing library for react/next, or if it is needed
