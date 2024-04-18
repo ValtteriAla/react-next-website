@@ -5,8 +5,8 @@ export default async function PostList() {
 const postsResponse = await client.queries.postConnection()
 const postsList = postsResponse.data?.postConnection?.edges
 
+console.log(postsResponse)
 
-console.log(postsList)
   return (
     <>
       <h1>Posts</h1>

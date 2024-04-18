@@ -9,11 +9,23 @@ const branch =
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
+
+  admin: {
+    
+    authHooks: {
+      onLogin: async ({ token }) => {
+        //  When the user logs in enter preview mode
+        location.href =
+          `/api/preview/enter?token=${token.id_token}&slug=` + location;
+      },
+      onLogout: async () => {
+        // When the user logs out exit preview mode
+        location.href = `/api/preview/exit?slug=` + location;
+      },
+    },
+  },
 
   build: {
     outputFolder: "admin",

@@ -6,9 +6,9 @@ title: Dev Post 1
 
 Real monkey
 
-
 ```javascript
 const monkey = "Mankii"
+console.log("mankii")
 ```
 
 ## Hosted in![](/vercel.svg)
