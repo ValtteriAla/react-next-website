@@ -2,4 +2,4 @@
 title: Second Post
 ---
 
-Second post from TinaCMS
+Second post from TinaCMS edited version
