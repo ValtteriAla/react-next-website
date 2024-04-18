@@ -1,5 +1,5 @@
 ---
-title: Post 1
+title: First Post
 ---
 
 # This is first post from TinaCMS

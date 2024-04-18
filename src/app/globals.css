@@ -99,3 +99,11 @@ a.active {
   grid-column: 1;
   background: black;
 }
+
+h1 {
+  font-size: xx-large;
+}
+
+li {
+  list-style-type: disc;
+}

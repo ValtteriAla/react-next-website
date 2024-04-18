@@ -4,7 +4,7 @@ title: Dev Post 1
 
 # Yippeee
 
-Real monkey is a monkey monkey\
+Real monkey
 
 
 ```javascript
