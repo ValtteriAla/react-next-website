@@ -12,7 +12,7 @@ export default async function Page({ params: { filename } } : any) {
 
   return <>{isEnabled ? <PageClient {...res} /> : <PageServer {...res} />}</>;
 }
-
+/*
 export async function generateStaticParams() {
   const postsListData = await client.queries.postConnection();
 
@@ -20,3 +20,4 @@ export async function generateStaticParams() {
     filename: post?.node?._sys.filename,
   }));
 }
+*/
