@@ -4,6 +4,9 @@ import { client } from "../../../tina/__generated__/client";
 export default async function PostList() {
 const postsResponse = await client.queries.postConnection()
 const postsList = postsResponse.data?.postConnection?.edges
+
+
+console.log(postsList)
   return (
     <>
       <h1>Posts</h1>
@@ -21,16 +24,3 @@ const postsList = postsResponse.data?.postConnection?.edges
       </>
   );
 }
-
-export const getServerProps = async () => {
-  const { data, query, variables } = await client.queries.postConnection();
-
-  return {
-    props: {
-      data,
-      query,
-      variables,
-      //myOtherProp: 'some-other-data',
-    },
-  };
-};
