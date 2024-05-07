@@ -3,7 +3,7 @@ import { draftMode } from "next/headers";
 import PageClient from "./PageClient";
 import PageServer from "./PageServer";
 
-export default async function Page({ params: { filename } } : any) {
+export default async function Page({ params: { filename } }) {
   const res = await client.queries.post({
     relativePath: `${filename}.md`,
   });
@@ -12,12 +12,11 @@ export default async function Page({ params: { filename } } : any) {
 
   return <>{isEnabled ? <PageClient {...res} /> : <PageServer {...res} />}</>;
 }
-/*
+
 export async function generateStaticParams() {
   const postsListData = await client.queries.postConnection();
 
-  return postsListData?.data?.postConnection?.edges?.map((post) => ({
-    filename: post?.node?._sys.filename,
+  return postsListData.data.postConnection.edges.map((post) => ({
+    filename: post.node._sys.filename,
   }));
 }
-*/
